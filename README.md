@@ -10,6 +10,11 @@
 ## Usage
 
 `
+  $ npm install krypto-api-sdk
+  $ yarn add krypto-api-sdk
+`
+
+`
 $ const Krypto  = require('krypto-api-sdk')
 
 $ const apiKey = 'api key'
