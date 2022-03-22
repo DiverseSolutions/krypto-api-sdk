@@ -1,13 +1,10 @@
-# krypto-api-sdk
-
-> Krypto API wrapper for node
+# krypto.mn
 
 ## Table of Contents
 
 -   [Install](#install)
 -   [Usage](#usage)
 -   [API](#api)
--   [Contribute](#contribute)
 -   [License](#license)
 
 ## Install
@@ -45,15 +42,6 @@ client.getGainers(0, 100).then(console.log).catch(console.error)
     -   [Parameters](#parameters-2)
     -   [Examples](#examples-1)
 
-
-
-#### Parameters
-
--   `apiKey` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** API key for accessing the CoinMarketCap API
--   `Options` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** Options for the CoinMarketCap instance (optional, default `{}`)
-    -   `Options.version`   (optional, default `'v1'`)
-    -   `Options.fetcher`   (optional, default `fetch`)
-    -   `Options.config`   (optional, default `{}`)
 
 ### getGainers
 
