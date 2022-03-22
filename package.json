@@ -1,0 +1,22 @@
+{
+  "name": "krypto-api",
+  "version": "1.0.0",
+  "description": "krypto api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Munkhzorig000918/krypto-api.git"
+  },
+  "keywords": [
+    "krypto"
+  ],
+  "author": "Diverse Solutions",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Munkhzorig000918/krypto-api/issues"
+  },
+  "homepage": "https://github.com/Munkhzorig000918/krypto-api#readme"
+}
