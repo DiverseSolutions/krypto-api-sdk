@@ -11,6 +11,7 @@
 
 `
   $ const Krypto  = require('krypto-api-sdk')
+  
   $ const apiKey = 'api key'
 `
 
