@@ -92,7 +92,7 @@ client.getGainers(0, 100).then(console.log).catch(console.error)
 ### getQuoteLatest
 
 
-#### Parameters
+#### parameters-1
 
 -   `url`   /cryptocurrency/quotes/latest
 -   `options` (Object) Options for the request:
@@ -109,10 +109,12 @@ client.getQuoteLatest(query).then(console.log).catch(console.error)
 
 ### getGainers
 
+    
+#### Url
+- /cryptocurrency/listings/gainers
 
 #### Parameters
 
--   `url`   /cryptocurrency/listings/gainers
 -   `options` (Object) Options for the request:
     -   `options.start` (Integer)
     -   `options.end` (Integer)
