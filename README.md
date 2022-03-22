@@ -34,91 +34,91 @@ client.getGainers(0, 100).then(console.log).catch(console.error)
 #### Table of Contents
 
 -   [getQuotesLatest](#getQuoteLatest)
-    -   [Url](#url-1)
-    -   [Parameters](#parameters-1)
-    -   [Examples](#examples-1)
+    -   Url
+    -   Parameters
+    -   Examples
 -   [getGainers](#getGainers)
-    -   [Url](#url-2)
-    -   [Parameters](#parameters-2)
-    -   [Examples](#examples-2)
+    -   Url
+    -   Parameters
+    -   Examples
 -   [getRecent](#getRecent)
-    -   [Url](#url-3)
-    -   [Parameters](#parameters-3)
-    -   [Examples](#examples-3)
+    -   Url
+    -   Parameters
+    -   Examples
 -   [getLatest](#getLatest)
-    -   [Url](#url-4)
-    -   [Parameters](#parameters-4)
-    -   [Examples](#examples-4)
+    -   Url
+    -   Parameters
+    -   Examples
 -   [getTags](#getTags)
-    -   [Url](#url-5)
-    -   [Parameters](#parameters-5)
-    -   [Examples](#examples-5)
+    -   Url
+    -   Parameters
+    -   Examples
 -   [getMetricsQuotes](#getMetricsQuotes)
-    -   [Url](#url-6)
-    -   [Parameters](#parameters-6)
-    -   [Examples](#examples-6)
+    -   Url
+    -   Parameters
+    -   Examples
 -   [getNews](#getNews)
-    -   [Url](#url-7)
-    -   [Parameters](#parameters-7)
-    -   [Examples](#examples-7)
+    -   Url
+    -   Parameters
+    -   Examples
 -   [getFearGreed](#getFearGreed)
-    -   [Url](#url-8)
-    -   [Parameters](#parameters-8)
-    -   [Examples](#examples-8)
+    -   Url
+    -   Parameters
+    -   Examples
 -   [getInfo](#getInfo)
-    -   [Url](#url-9)
-    -   [Parameters](#parameters-9)
-    -   [Examples](#examples-9)
+    -   Url
+    -   Parameters
+    -   Examples
 -   [getExchangeInfo](#getExchangeInfo)
-    -   [Url](#url-10)
-    -   [Parameters](#parameters-10)
-    -   [Examples](#examples-10)
+    -   Url
+    -   Parameters
+    -   Examples
 -   [getMarketPairs](#getMarketPairs)
-    -   [Url](#url-11)
-    -   [Parameters](#parameters-11)
-    -   [Examples](#examples-11)
+    -   Url
+    -   Parameters
+    -   Examples
 -   [getExchangeMarketPairs](#getExchangeMarketPairs)
-    -   [Url](#url-12)
-    -   [Parameters](#parameters-12)
-    -   [Examples](#examples-12)
+    -   Url
+    -   Parameters
+    -   Examples
 -   [getExchangeListings](#getExchangeListings)
-    -   [Url](#url-13)
-    -   [Parameters](#parameters-13)
-    -   [Examples](#examples-13)
+    -   Url
+    -   Parameters
+    -   Examples
 -   [getSingleNews](#getSingleNews)
-    -   [Url](#url-14)
-    -   [Parameters](#parameters-14)
-    -   [Examples](#examples-14)
+    -   Url
+    -   Parameters
+    -   Examples
 -   [getFiatMap](#getFiatMap)
-    -   [Url](#url-15)
-    -   [Parameters](#parameters-15)
-    -   [Examples](#examples-15)
+    -   Url
+    -   Parameters
+    -   Examples
 -   [getCryptoMap](#getCryptoMap)
-    -   [Url](#url-16)
-    -   [Parameters](#parameters-16)
-    -   [Examples](#examples-16)
+    -   Url
+    -   Parameters
+    -   Examples
 -   [getTrending](#getTrending)
-    -   [Url](#url-17)
-    -   [Parameters](#parameters-17)
-    -   [Examples](#examples-17)
+    -   Url
+    -   Parameters
+    -   Examples
 -   [getConvertion](#getConvertion)
-    -   [Url](#url-18)
-    -   [Parameters](#parameters-18)
-    -   [Examples](#examples-18)
+    -   Url
+    -   Parameters
+    -   Examples
 
 
 ### getQuoteLatest
 
-#### [Url](#url-1)
+#### Url
 - /cryptocurrency/quotes/latest
 
-#### [Parameter](#parameter-1)
+#### Parameter
 -   `options` (Object) Options for the request:
     -   `options.slug` (String)
     -   `options.symbol` (String)
     -   `options.id` (Array<Integer>)
 
-#### [Examples](#examples-1)
+#### Examples
 ```javascript
 const client = new CoinMarketCap('api key')
 client.getQuoteLatest(query).then(console.log).catch(console.error)
@@ -127,15 +127,15 @@ client.getQuoteLatest(query).then(console.log).catch(console.error)
     
 ### getGainers
 
-#### [Url](#url-2)
+#### Url
 - /cryptocurrency/listings/gainers
 
-#### [Parameters](#parameters-2)
+#### Parameters
 -   `options` (Object) Options for the request:
     -   `options.start` (Integer)
     -   `options.end` (Integer)
 
-#### [Examples](#examples-2)
+#### Examples
 ```javascript
 const client = new CoinMarketCap('api key')
 client.getGainers(query).then(console.log).catch(console.error)
@@ -144,15 +144,15 @@ client.getGainers(query).then(console.log).catch(console.error)
     
 ### getRecent
     
-#### [Url](#url-3)
+#### Url
 - /cryptocurrency/listings/recent
 
-#### [Parameters](#parameters-3)
+#### Parameters
 -   `options` (Object) Options for the request:
     -   `options.start` (Integer)
     -   `options.end` (Integer)
 
-#### [Examples](#examples-3)
+#### Examples
 ```javascript
 const client = new CoinMarketCap('api key')
 client.getRecent(query).then(console.log).catch(console.error)
@@ -161,15 +161,15 @@ client.getRecent(query).then(console.log).catch(console.error)
     
 ### getLatest
 
-#### [Url](#url-4)
+#### Url
 - /cryptocurrency/listings/latest
     
-#### [Parameters](#parameters-4)
+#### Parameters
 -   `options` (Object) Options for the request:
     -   `options.start` (Integer)
     -   `options.end` (Integer)
 
-#### [Examples](#examples-4)
+#### Examples
 ```javascript
 const client = new CoinMarketCap('api key')
 client.getLatest(query).then(console.log).catch(console.error)
@@ -178,12 +178,12 @@ client.getLatest(query).then(console.log).catch(console.error)
     
 ### getTags
 
-#### [Url](#url-5)
+#### Url
 - /cryptocurrency/listings/latest
     
-#### [Parameters](#parameters-5)
+#### Parameters
 
-#### [Examples](#examples-5)
+#### Examples
 ```javascript
 const client = new CoinMarketCap('api key')
 client.getLatest().then(console.log).catch(console.error)
@@ -192,12 +192,12 @@ client.getLatest().then(console.log).catch(console.error)
     
 ### getMetricsQuotes
 
-#### [Url](#url-6)
+#### Url
 - /cryptocurrency/listings/latest
     
-#### [Parameters](#parameters-6)
+#### Parameters
 
-#### [Examples](#examples-6)
+#### Examples
 ```javascript
 const client = new CoinMarketCap('api key')
 client.getMetricsQuotes().then(console.log).catch(console.error)
@@ -206,15 +206,15 @@ client.getMetricsQuotes().then(console.log).catch(console.error)
     
 ### getNews
     
-#### [Url](#url-7)
+#### Url
 - /news/latest
 
-#### [Parameters](#parameters-7)
+#### Parameters
 -   `options` (Object) Options for the request:
     -   `options.start` (Integer)
     -   `options.end` (Integer)
 
-#### [Examples](#examples-7)
+#### Examples
 ```javascript
 const client = new CoinMarketCap('api key')
 client.getNews(query).then(console.log).catch(console.error)
@@ -223,12 +223,12 @@ client.getNews(query).then(console.log).catch(console.error)
     
 ### getFearGreed
 
-#### [Url](#url-8)
+#### Url
 - /metrics/fear-and-greed
     
-#### [Parameters](#parameters-8)
+#### Parameters
 
-#### [Examples](#examples-8)
+#### Examples
 ```javascript
 const client = new CoinMarketCap('api key')
 client.getFearGreed().then(console.log).catch(console.error)
@@ -236,16 +236,16 @@ client.getFearGreed().then(console.log).catch(console.error)
     
 ### getInfo
 
-#### [Url](#url-9)
+#### Url
 - /cryptocurrency/info
     
-#### [Parameters](#parameters-9)
+#### Parameters
 -   `options` (Object) Options for the request:
     -   `options.slug` (String)
     -   `options.symbol` (String)
     -   `options.id` (Array)
 
-#### [Examples](#examples-9)
+#### Examples
 ```javascript
 const client = new CoinMarketCap('api key')
 client.getInfo(query).then(console.log).catch(console.error)
@@ -254,15 +254,15 @@ client.getInfo(query).then(console.log).catch(console.error)
 
 ### getExchangeInfo
 
-#### [Url](#url-10)
+#### Url
 - /exchange/info
     
-#### [Parameters](#parameters-10)
+#### Parameters
 -   `options` (Object) Options for the request:
     -   `options.slug` (String)
     -   `options.id` (Array)
 
-#### [Examples](#examples-10)
+#### Examples
 ```javascript
 const client = new CoinMarketCap('api key')
 client.getExchangeInfo(query).then(console.log).catch(console.error)
@@ -271,16 +271,16 @@ client.getExchangeInfo(query).then(console.log).catch(console.error)
     
 ### getMarketPairs
 
-#### [Url](#url-11)
+#### Url
 - /cryptocurrency/market-pairs/latest
     
-#### [Parameters](#parameters-11)
+#### Parameters
 -   `options` (Object) Options for the request:
     -   `options.slug` (String)
     -   `options.symbol` (String)
     -   `options.id` (Array)
 
-#### [Examples](#examples-11)
+#### Examples
 ```javascript
 const client = new CoinMarketCap('api key')
 client.getMarketPairs(query).then(console.log).catch(console.error)
@@ -289,16 +289,16 @@ client.getMarketPairs(query).then(console.log).catch(console.error)
     
 ### getExchangeMarketPairs
 
-#### [Url](#url-12)
+#### Url
 - /exchange/market-pairs/latest
     
-#### [Parameters](#parameters-12)
+#### Parameters
 -   `options` (Object) Options for the request:
     -   `options.slug` (String)
     -   `options.symbol` (String)
     -   `options.id` (Array)
 
-#### [Examples](#examples-12)
+#### Examples
 ```javascript
 const client = new CoinMarketCap('api key')
 client.getExchangeMarketPairs(query).then(console.log).catch(console.error)
@@ -307,15 +307,15 @@ client.getExchangeMarketPairs(query).then(console.log).catch(console.error)
     
 ### getExchangeListings
 
-#### [Url](#url-13)
+#### Url
 - /exchange/listings/latest
     
-#### [Parameters](#parameters-13)
+#### Parameters
 -   `options` (Object) Options for the request:
     -   `options.start` (Integer)
     -   `options.limit` (Integer)
 
-#### [Examples](#examples-13)
+#### Examples
 ```javascript
 const client = new CoinMarketCap('api key')
 client.getExchangeListings(query).then(console.log).catch(console.error)
@@ -324,15 +324,15 @@ client.getExchangeListings(query).then(console.log).catch(console.error)
     
 ### getSingleNews
 
-#### [Url](#url-14)
+#### Url
 - /news
     
-#### [Parameters](#parameters-14)
+#### Parameters
 -   `options` (Object) Options for the request:
     -   `options.start` (Integer)
     -   `options.limit` (Integer)
 
-#### [Examples](#examples-14)
+#### Examples
 ```javascript
 const client = new CoinMarketCap('api key')
 client.getSingleNews(query).then(console.log).catch(console.error)
@@ -341,15 +341,15 @@ client.getSingleNews(query).then(console.log).catch(console.error)
     
 ### getFiatMap
 
-#### [Url](#url-15)
+#### Url
 - /fiat/map
     
-#### [Parameters](#parameters-15)
+#### Parameters
 -   `options` (Object) Options for the request:
     -   `options.start` (Integer)
     -   `options.limit` (Integer)
 
-#### [Examples](#examples-15)
+#### Examples
 ```javascript
 const client = new CoinMarketCap('api key')
 client.getFiatMap(query).then(console.log).catch(console.error)
@@ -358,15 +358,15 @@ client.getFiatMap(query).then(console.log).catch(console.error)
     
 ### getCryptoMap
 
-#### [Url](#url-16)
+#### Url
 - /cryptocurrency/map
     
-#### [Parameters](#parameters-16)
+#### Parameters
 -   `options` (Object) Options for the request:
     -   `options.start` (Integer)
     -   `options.limit` (Integer)
 
-#### [Examples](#examples-16)
+#### Examples
 ```javascript
 const client = new CoinMarketCap('api key')
 client.getCryptoMap(query).then(console.log).catch(console.error)
@@ -375,15 +375,15 @@ client.getCryptoMap(query).then(console.log).catch(console.error)
     
 ### getTrending
 
-#### [Url](#url-17)
+#### Url
 - /cryptocurrency/listings/trending
     
-#### [Parameters](#parameters-17)
+#### Parameters
 -   `options` (Object) Options for the request:
     -   `options.start` (Integer)
     -   `options.limit` (Integer)
 
-#### [Examples](#examples-17)
+#### Examples
 ```javascript
 const client = new CoinMarketCap('api key')
 client.getTrending(query).then(console.log).catch(console.error)
@@ -392,15 +392,15 @@ client.getTrending(query).then(console.log).catch(console.error)
     
 ### getConvertion
 
-#### [Url](#url-18)
+#### Url
 - /cryptocurrency/listings/trending
     
-#### [Parameters](#parameters-18)
+#### Parameters
 -   `options` (Object) Options for the request:
     -   `options.symbol` (String) !Required
     -   `options.convert` (Array) !Required
 
-#### [Examples](#examples-18)
+#### Examples
 ```javascript
 const client = new CoinMarketCap('api key')
 client.getConvertion(query).then(console.log).catch(console.error)
