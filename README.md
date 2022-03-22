@@ -38,61 +38,78 @@ client.getGainers(0, 100).then(console.log).catch(console.error)
     -   [Parameters](#parameters-1)
     -   [Examples](#examples-1)
 -   [getGainers](#getGainers)
+    -   [Url](#url-2)
     -   [Parameters](#parameters-2)
     -   [Examples](#examples-2)
 -   [getRecent](#getRecent)
+    -   [Url](#url-3)
     -   [Parameters](#parameters-3)
     -   [Examples](#examples-3)
 -   [getLatest](#getLatest)
+    -   [Url](#url-4)
     -   [Parameters](#parameters-4)
     -   [Examples](#examples-4)
 -   [getTags](#getTags)
+    -   [Url](#url-5)
     -   [Parameters](#parameters-5)
     -   [Examples](#examples-5)
 -   [getMetricsQuotes](#getMetricsQuotes)
+    -   [Url](#url-6)
     -   [Parameters](#parameters-6)
     -   [Examples](#examples-6)
 -   [getNews](#getNews)
+    -   [Url](#url-7)
     -   [Parameters](#parameters-7)
     -   [Examples](#examples-7)
 -   [getFearGreed](#getFearGreed)
+    -   [Url](#url-8)
     -   [Parameters](#parameters-8)
     -   [Examples](#examples-8)
 -   [getInfo](#getInfo)
+    -   [Url](#url-9)
     -   [Parameters](#parameters-9)
     -   [Examples](#examples-9)
 -   [getExchangeInfo](#getExchangeInfo)
+    -   [Url](#url-10)
     -   [Parameters](#parameters-10)
     -   [Examples](#examples-10)
 -   [getMarketPairs](#getMarketPairs)
+    -   [Url](#url-11)
     -   [Parameters](#parameters-11)
     -   [Examples](#examples-11)
 -   [getExchangeMarketPairs](#getExchangeMarketPairs)
+    -   [Url](#url-12)
     -   [Parameters](#parameters-12)
     -   [Examples](#examples-12)
 -   [getExchangeListings](#getExchangeListings)
+    -   [Url](#url-13)
     -   [Parameters](#parameters-13)
     -   [Examples](#examples-13)
 -   [getSingleNews](#getSingleNews)
+    -   [Url](#url-14)
     -   [Parameters](#parameters-14)
     -   [Examples](#examples-14)
 -   [getFiatMap](#getFiatMap)
+    -   [Url](#url-15)
     -   [Parameters](#parameters-15)
     -   [Examples](#examples-15)
 -   [getCryptoMap](#getCryptoMap)
+    -   [Url](#url-16)
     -   [Parameters](#parameters-16)
     -   [Examples](#examples-16)
 -   [getTrending](#getTrending)
+    -   [Url](#url-17)
     -   [Parameters](#parameters-17)
     -   [Examples](#examples-17)
 -   [getConvertion](#getConvertion)
+    -   [Url](#url-18)
     -   [Parameters](#parameters-18)
     -   [Examples](#examples-18)
 
 
 ### getQuoteLatest
 
-#### Url
+#### url-1
 - /cryptocurrency/quotes/latest
 
 #### parameters-1
@@ -110,15 +127,15 @@ client.getQuoteLatest(query).then(console.log).catch(console.error)
     
 ### getGainers
 
-#### Url
+#### url-2
 - /cryptocurrency/listings/gainers
 
-#### Parameters
+#### parameters-2
 -   `options` (Object) Options for the request:
     -   `options.start` (Integer)
     -   `options.end` (Integer)
 
-#### Examples
+#### examples-2
 ```javascript
 const client = new CoinMarketCap('api key')
 client.getGainers(query).then(console.log).catch(console.error)
