@@ -1,6 +1,6 @@
 {
-  "name": "krypto-api",
-  "version": "1.0.0",
+  "name": "krypto-api-sdk",
+  "version": "1.0.1",
   "description": "krypto api",
   "main": "index.js",
   "scripts": {
