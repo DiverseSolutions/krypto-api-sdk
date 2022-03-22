@@ -34,7 +34,7 @@ client.getGainers(0, 100).then(console.log).catch(console.error)
 #### Table of Contents
 
 -   [getQuotesLatest](#getQuoteLatest)
-    -   [Parameters](#parameters-1)
+    -   [Url](#url-1)
     -   [Parameters](#parameters-1)
     -   [Examples](#examples-1)
 -   [getGainers](#getGainers)
@@ -101,7 +101,7 @@ client.getGainers(0, 100).then(console.log).catch(console.error)
     -   `options.symbol` (String)
     -   `options.id` (Array<Integer>)
 
-#### Examples
+#### examples-1
 ```javascript
 const client = new CoinMarketCap('api key')
 client.getQuoteLatest(query).then(console.log).catch(console.error)
