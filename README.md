@@ -17,5 +17,4 @@ $ const client = new Krypto(apiKey)
 
 $ client.getTags().then(console.log).catch(console.error)
 $ client.getLatest(0, 100).then(console.log).catch(console.error)
-
 `
