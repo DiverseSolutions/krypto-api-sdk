@@ -33,31 +33,78 @@ client.getGainers(0, 100).then(console.log).catch(console.error)
 
 #### Table of Contents
 
--   [constructor](#constructor)
-    -   [Parameters](#parameters)
--   [getGainers](#getgainers)
+-   [getQuotesLatest](#getQuoteLatest)
     -   [Parameters](#parameters-1)
-    -   [Examples](#examples)
--   [getRecent](#getRecent)
-    -   [Parameters](#parameters-2)
     -   [Examples](#examples-1)
+-   [getGainers](#getGainers)
+    -   [Parameters](#parameters-2)
+    -   [Examples](#examples-2)
+-   [getRecent](#getRecent)
+    -   [Parameters](#parameters-3)
+    -   [Examples](#examples-3)
+-   [getLatest](#getLatest)
+    -   [Parameters](#parameters-4)
+    -   [Examples](#examples-4)
+-   [getTags](#getTags)
+    -   [Parameters](#parameters-5)
+    -   [Examples](#examples-5)
+-   [getMetricsQuotes](#getMetricsQuotes)
+    -   [Parameters](#parameters-6)
+    -   [Examples](#examples-6)
+-   [getNews](#getNews)
+    -   [Parameters](#parameters-7)
+    -   [Examples](#examples-7)
+-   [getFearGreed](#getFearGreed)
+    -   [Parameters](#parameters-8)
+    -   [Examples](#examples-8)
+-   [getInfo](#getInfo)
+    -   [Parameters](#parameters-9)
+    -   [Examples](#examples-9)
+-   [getExchangeInfo](#getExchangeInfo)
+    -   [Parameters](#parameters-10)
+    -   [Examples](#examples-10)
+-   [getMarketPairs](#getMarketPairs)
+    -   [Parameters](#parameters-11)
+    -   [Examples](#examples-11)
+-   [getExchangeMarketPairs](#getExchangeMarketPairs)
+    -   [Parameters](#parameters-12)
+    -   [Examples](#examples-12)
+-   [getExchangeListings](#getExchangeListings)
+    -   [Parameters](#parameters-13)
+    -   [Examples](#examples-13)
+-   [getSingleNews](#getSingleNews)
+    -   [Parameters](#parameters-14)
+    -   [Examples](#examples-14)
+-   [getFiatMap](#getFiatMap)
+    -   [Parameters](#parameters-15)
+    -   [Examples](#examples-15)
+-   [getCryptoMap](#getCryptoMap)
+    -   [Parameters](#parameters-16)
+    -   [Examples](#examples-16)
+-   [getTrending](#getTrending)
+    -   [Parameters](#parameters-17)
+    -   [Examples](#examples-17)
+-   [getConvertion](#getConvertion)
+    -   [Parameters](#parameters-18)
+    -   [Examples](#examples-18)
 
 
-### getGainers
+### getQuoteLatest
 
 
 #### Parameters
 
--   `args`   (optional, default `{}`)
+-   `url`   /cryptocurrency/quotes/latest
 -   `options` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** Options for the request:
-    -   `options.start` **([Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))** Return results from rank start and above (optional, default `1`)
-    -   `options.limit` **([Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))?** Only returns limit number of results
+    -   `options.slug` (String)
+    -   `options.symbol` (String)
+    -   `options.id` (Array<Integer>)
 
 #### Examples
 
 ```javascript
 const client = new CoinMarketCap('api key')
-client.getGainers(start, limit).then(console.log).catch(console.error)
+client.getQuoteLatest(query).then(console.log).catch(console.error)
 ```
 
 ## License
