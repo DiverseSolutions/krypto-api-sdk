@@ -4,5 +4,6 @@
 
 `
   $ npm install krypto-api-sdk
+  # OR
   $ yarn add krypto-api-sdk
 `
