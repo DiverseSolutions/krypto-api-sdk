@@ -23,8 +23,10 @@ const Krypto = require('krypto-spi-sdk')
 const apiKey = 'api key'
 const client = new Krypto(apiKey)
 
+let query = { start: 0, limit: 100 }
+
 client.getTags().then(console.log).catch(console.error)
-client.getGainers(0, 100).then(console.log).catch(console.error)
+client.getGainers(query).then(console.log).catch(console.error)
 ```
 
 ## API
