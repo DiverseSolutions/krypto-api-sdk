@@ -10,12 +10,12 @@
 ## Usage
 
 `
-const Krypto  = require('krypto-api-sdk')
+$ const Krypto  = require('krypto-api-sdk')
 
-const apiKey = 'api key'
-const client = new Krypto(apiKey)
+$ const apiKey = 'api key'
+$ const client = new Krypto(apiKey)
 
-client.getTags().then(console.log).catch(console.error)
-client.getLatest(0, 100).then(console.log).catch(console.error)
+$ client.getTags().then(console.log).catch(console.error)
+$ client.getLatest(0, 100).then(console.log).catch(console.error)
 
 `
