@@ -95,7 +95,7 @@ client.getGainers(0, 100).then(console.log).catch(console.error)
 #### Parameters
 
 -   `url`   /cryptocurrency/quotes/latest
--   `options` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** Options for the request:
+-   `options` (Object) Options for the request:
     -   `options.slug` (String)
     -   `options.symbol` (String)
     -   `options.id` (Array<Integer>)
@@ -107,6 +107,86 @@ const client = new CoinMarketCap('api key')
 client.getQuoteLatest(query).then(console.log).catch(console.error)
 ```
 
+### getGainers
+
+
+#### Parameters
+
+-   `url`   /cryptocurrency/listings/gainers
+-   `options` (Object) Options for the request:
+    -   `options.start` (Integer)
+    -   `options.end` (Integer)
+
+#### Examples
+
+```javascript
+const client = new CoinMarketCap('api key')
+client.getGainers(query).then(console.log).catch(console.error)
+```
+    
+### getRecent
+
+
+#### Parameters
+
+-   `url`   /cryptocurrency/listings/recent
+-   `options` (Object) Options for the request:
+    -   `options.start` (Integer)
+    -   `options.end` (Integer)
+
+#### Examples
+
+```javascript
+const client = new CoinMarketCap('api key')
+client.getRecent(query).then(console.log).catch(console.error)
+```
+    
+### getLatest
+
+
+#### Parameters
+
+-   `url`   /cryptocurrency/listings/latest
+-   `options` (Object) Options for the request:
+    -   `options.start` (Integer)
+    -   `options.end` (Integer)
+
+#### Examples
+
+```javascript
+const client = new CoinMarketCap('api key')
+client.getLatest(query).then(console.log).catch(console.error)
+```
+    
+### getTags
+
+
+#### Parameters
+
+-   `url`   /cryptocurrency/listings/latest
+
+#### Examples
+
+```javascript
+const client = new CoinMarketCap('api key')
+client.getLatest().then(console.log).catch(console.error)
+```
+    
+### getMetricsQuotes
+
+
+#### Parameters
+
+-   `url`   /cryptocurrency/listings/latest
+
+#### Examples
+
+```javascript
+const client = new CoinMarketCap('api key')
+client.getMetricsQuotes().then(console.log).catch(console.error)
+```
+    
+    
 ## License
 
 Licensed under the MIT License.
