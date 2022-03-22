@@ -34,7 +34,7 @@ client.getGainers(0, 100).then(console.log).catch(console.error)
 #### Table of Contents
 
 -   [getQuotesLatest](#getQuoteLatest)
-    -   [Url](#url-1)
+    -   Url
     -   [Parameters](#parameters-1)
     -   [Examples](#examples-1)
 -   [getGainers](#getGainers)
