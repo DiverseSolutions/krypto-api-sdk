@@ -106,6 +106,10 @@ client.getGainers(query).then(console.log).catch(console.error)
     -   Url
     -   Parameters
     -   Examples
+-   [getNewsSearch](#getNewsSearch)
+    -   Url
+    -   Parameters
+    -   Examples
 
 
 ### getQuoteLatest
@@ -121,7 +125,7 @@ client.getGainers(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new Krypto('api key')
+const client = new Krypto(BASE_URL)
 client.getQuoteLatest(query).then(console.log).catch(console.error)
 ```
 
@@ -138,7 +142,7 @@ client.getQuoteLatest(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new Krypto('api key')
+const client = new Krypto(BASE_URL)
 client.getGainers(query).then(console.log).catch(console.error)
 ```
    
@@ -155,7 +159,7 @@ client.getGainers(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new Krypto('api key')
+const client = new Krypto(BASE_URL)
 client.getRecent(query).then(console.log).catch(console.error)
 ```
     
@@ -172,7 +176,7 @@ client.getRecent(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new Krypto('api key')
+const client = new Krypto(BASE_URL)
 client.getLatest(query).then(console.log).catch(console.error)
 ```
     
@@ -186,7 +190,7 @@ client.getLatest(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new Krypto('api key')
+const client = new Krypto(BASE_URL)
 client.getLatest().then(console.log).catch(console.error)
 ```
     
@@ -200,7 +204,7 @@ client.getLatest().then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new Krypto('api key')
+const client = new Krypto(BASE_URL)
 client.getMetricsQuotes().then(console.log).catch(console.error)
 ```
     
@@ -217,7 +221,7 @@ client.getMetricsQuotes().then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new Krypto('api key')
+const client = new Krypto(BASE_URL)
 client.getNews(query).then(console.log).catch(console.error)
 ```
     
@@ -231,7 +235,7 @@ client.getNews(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new Krypto('api key')
+const client = new Krypto(BASE_URL)
 client.getFearGreed().then(console.log).catch(console.error)
 ```
     
@@ -248,7 +252,7 @@ client.getFearGreed().then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new Krypto('api key')
+const client = new Krypto(BASE_URL)
 client.getInfo(query).then(console.log).catch(console.error)
 ```
     
@@ -265,7 +269,7 @@ client.getInfo(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new Krypto('api key')
+const client = new Krypto(BASE_URL)
 client.getExchangeInfo(query).then(console.log).catch(console.error)
 ```
     
@@ -283,7 +287,7 @@ client.getExchangeInfo(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new Krypto('api key')
+const client = new Krypto(BASE_URL)
 client.getMarketPairs(query).then(console.log).catch(console.error)
 ```
     
@@ -301,7 +305,7 @@ client.getMarketPairs(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new Krypto('api key')
+const client = new Krypto(BASE_URL)
 client.getExchangeMarketPairs(query).then(console.log).catch(console.error)
 ```
     
@@ -318,7 +322,7 @@ client.getExchangeMarketPairs(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new Krypto('api key')
+const client = new Krypto(BASE_URL)
 client.getExchangeListings(query).then(console.log).catch(console.error)
 ```
     
@@ -335,7 +339,7 @@ client.getExchangeListings(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new Krypto('api key')
+const client = new Krypto(BASE_URL)
 client.getSingleNews(query).then(console.log).catch(console.error)
 ```
     
@@ -352,7 +356,7 @@ client.getSingleNews(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new Krypto('api key')
+const client = new Krypto(BASE_URL)
 client.getFiatMap(query).then(console.log).catch(console.error)
 ```
     
@@ -369,7 +373,7 @@ client.getFiatMap(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new Krypto('api key')
+const client = new Krypto(BASE_URL)
 client.getCryptoMap(query).then(console.log).catch(console.error)
 ```
     
@@ -386,7 +390,7 @@ client.getCryptoMap(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new Krypto('api key')
+const client = new Krypto(BASE_URL)
 client.getTrending(query).then(console.log).catch(console.error)
 ```
     
@@ -403,8 +407,28 @@ client.getTrending(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new Krypto('api key')
+const client = new Krypto(BASE_URL)
 client.getConvertion(query).then(console.log).catch(console.error)
+```
+
+
+
+### getNewsSearch
+
+#### Url
+- /news/search
+    
+#### Parameters
+-   `options` (Object) Options for the request:
+    -   `options.slug` (String) 
+    -   `options.tag` (String)
+    -   `options.start` (Integer)
+    -   `options.limit` (Integer)
+
+#### Examples
+```javascript
+const client = new Krypto(BASE_URL)
+client.getNewsSearch(query).then(console.log).catch(console.error)
 ```
     
     

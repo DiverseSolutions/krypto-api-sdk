@@ -208,13 +208,20 @@ class Krypto {
             }
         })
     }
+
+    // slug: string, tag: string, start: integer, limit: integer
+    getNewsSearch (query) {
+        return createRequest({
+            fetcher: this.fetcher,
+            url: `${this.url}/news/search`,
+            config: this.config,
+            query: query
+        })
+    }
 }
 
 const createRequest = (args = {}) => {
     const { url, config, query, fetcher } = args
-
-    console.log("url")
-    console.log(url)
 
     return fetcher(`${url}${query ? `?${qs.stringify(query)}` : ''}`, config).then(res =>
         res.json()  
