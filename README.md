@@ -20,12 +20,11 @@ $ yarn add krypto-api-sdk
 ```js
 const Krypto = require('krypto-spi-sdk')
 
-const apiKey = 'api key'
-const client = new Krypto(apiKey)
+const BASE_URL = '********'
+const client = new Krypto(BASE_URL)
 
 let query = { start: 0, limit: 100 }
 
-client.getTags().then(console.log).catch(console.error)
 client.getGainers(query).then(console.log).catch(console.error)
 ```
 
@@ -122,7 +121,7 @@ client.getGainers(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new CoinMarketCap('api key')
+const client = new Krypto('api key')
 client.getQuoteLatest(query).then(console.log).catch(console.error)
 ```
 
@@ -139,7 +138,7 @@ client.getQuoteLatest(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new CoinMarketCap('api key')
+const client = new Krypto('api key')
 client.getGainers(query).then(console.log).catch(console.error)
 ```
    
@@ -156,7 +155,7 @@ client.getGainers(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new CoinMarketCap('api key')
+const client = new Krypto('api key')
 client.getRecent(query).then(console.log).catch(console.error)
 ```
     
@@ -173,7 +172,7 @@ client.getRecent(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new CoinMarketCap('api key')
+const client = new Krypto('api key')
 client.getLatest(query).then(console.log).catch(console.error)
 ```
     
@@ -187,7 +186,7 @@ client.getLatest(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new CoinMarketCap('api key')
+const client = new Krypto('api key')
 client.getLatest().then(console.log).catch(console.error)
 ```
     
@@ -201,7 +200,7 @@ client.getLatest().then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new CoinMarketCap('api key')
+const client = new Krypto('api key')
 client.getMetricsQuotes().then(console.log).catch(console.error)
 ```
     
@@ -218,7 +217,7 @@ client.getMetricsQuotes().then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new CoinMarketCap('api key')
+const client = new Krypto('api key')
 client.getNews(query).then(console.log).catch(console.error)
 ```
     
@@ -232,7 +231,7 @@ client.getNews(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new CoinMarketCap('api key')
+const client = new Krypto('api key')
 client.getFearGreed().then(console.log).catch(console.error)
 ```
     
@@ -249,7 +248,7 @@ client.getFearGreed().then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new CoinMarketCap('api key')
+const client = new Krypto('api key')
 client.getInfo(query).then(console.log).catch(console.error)
 ```
     
@@ -266,7 +265,7 @@ client.getInfo(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new CoinMarketCap('api key')
+const client = new Krypto('api key')
 client.getExchangeInfo(query).then(console.log).catch(console.error)
 ```
     
@@ -284,7 +283,7 @@ client.getExchangeInfo(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new CoinMarketCap('api key')
+const client = new Krypto('api key')
 client.getMarketPairs(query).then(console.log).catch(console.error)
 ```
     
@@ -302,7 +301,7 @@ client.getMarketPairs(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new CoinMarketCap('api key')
+const client = new Krypto('api key')
 client.getExchangeMarketPairs(query).then(console.log).catch(console.error)
 ```
     
@@ -319,7 +318,7 @@ client.getExchangeMarketPairs(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new CoinMarketCap('api key')
+const client = new Krypto('api key')
 client.getExchangeListings(query).then(console.log).catch(console.error)
 ```
     
@@ -336,7 +335,7 @@ client.getExchangeListings(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new CoinMarketCap('api key')
+const client = new Krypto('api key')
 client.getSingleNews(query).then(console.log).catch(console.error)
 ```
     
@@ -353,7 +352,7 @@ client.getSingleNews(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new CoinMarketCap('api key')
+const client = new Krypto('api key')
 client.getFiatMap(query).then(console.log).catch(console.error)
 ```
     
@@ -370,7 +369,7 @@ client.getFiatMap(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new CoinMarketCap('api key')
+const client = new Krypto('api key')
 client.getCryptoMap(query).then(console.log).catch(console.error)
 ```
     
@@ -387,7 +386,7 @@ client.getCryptoMap(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new CoinMarketCap('api key')
+const client = new Krypto('api key')
 client.getTrending(query).then(console.log).catch(console.error)
 ```
     
@@ -404,7 +403,7 @@ client.getTrending(query).then(console.log).catch(console.error)
 
 #### Examples
 ```javascript
-const client = new CoinMarketCap('api key')
+const client = new Krypto('api key')
 client.getConvertion(query).then(console.log).catch(console.error)
 ```
     

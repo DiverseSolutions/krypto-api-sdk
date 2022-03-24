@@ -3,12 +3,11 @@
 const fetch = require('node-fetch')
 const qs = require('qs')
 
-const BASE_URL = 'https://api.krypto.mn'
+// const BASE_URL = 'https://api.krypto.mn'
 
 class Krypto {
 
-     constructor (apiKey, { fetcher = fetch, config = {} } = {}) {
-        this.apiKey = apiKey
+     constructor (BASE_URL, { fetcher = fetch, config = {} } = {}) {
         this.config = Object.assign({}, {
           method: 'GET',
           headers: {
@@ -215,7 +214,7 @@ const createRequest = (args = {}) => {
     const { url, config, query, fetcher } = args
 
     console.log("url")
-    console.log(`${url}${query ? `?${qs.stringify(query)}` : ''}`)
+    console.log(url)
 
     return fetcher(`${url}${query ? `?${qs.stringify(query)}` : ''}`, config).then(res =>
         res.json()  
