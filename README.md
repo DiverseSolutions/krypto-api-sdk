@@ -25,7 +25,7 @@ const client = new Krypto(BASE_URL)
 
 let query = { start: 0, limit: 100 }
 
-client.getGainers(query).then(console.log).catch(console.error)
+client.getCryptoMarketPairsLatest(query).then(console.log).catch(console.error)
 ```
 
 ## API
@@ -34,47 +34,11 @@ client.getGainers(query).then(console.log).catch(console.error)
 
 #### Table of Contents
 
--   [getQuotesLatest](#getQuoteLatest)
+-   [getCryptoQuotesLatest](#getCryptoQuotesLatest)
     -   Url
     -   Parameters
     -   Examples
--   [getGainers](#getGainers)
-    -   Url
-    -   Parameters
-    -   Examples
--   [getRecent](#getRecent)
-    -   Url
-    -   Parameters
-    -   Examples
--   [getLatest](#getLatest)
-    -   Url
-    -   Parameters
-    -   Examples
--   [getTags](#getTags)
-    -   Url
-    -   Parameters
-    -   Examples
--   [getMetricsQuotes](#getMetricsQuotes)
-    -   Url
-    -   Parameters
-    -   Examples
--   [getNews](#getNews)
-    -   Url
-    -   Parameters
-    -   Examples
--   [getFearGreed](#getFearGreed)
-    -   Url
-    -   Parameters
-    -   Examples
--   [getInfo](#getInfo)
-    -   Url
-    -   Parameters
-    -   Examples
--   [getExchangeInfo](#getExchangeInfo)
-    -   Url
-    -   Parameters
-    -   Examples
--   [getMarketPairs](#getMarketPairs)
+-   [getCryptoMarketPairsLatest](#getCryptoMarketPairsLatest)
     -   Url
     -   Parameters
     -   Examples
@@ -82,7 +46,59 @@ client.getGainers(query).then(console.log).catch(console.error)
     -   Url
     -   Parameters
     -   Examples
--   [getExchangeListings](#getExchangeListings)
+-   [getExchangeListingsLatest](#getExchangeListingsLatest)
+    -   Url
+    -   Parameters
+    -   Examples
+-   [getCryptoListingsLatest](#getCryptoListingsLatest)
+    -   Url
+    -   Parameters
+    -   Examples
+-   [getCryptoListingsTrending](#getCryptoListingsTrending)
+    -   Url
+    -   Parameters
+    -   Examples
+-   [getCryptoListingsGainers](#getCryptoListingsGainers)
+    -   Url
+    -   Parameters
+    -   Examples
+-   [getCryptoListingsRecent](#getCryptoListingsRecent)
+    -   Url
+    -   Parameters
+    -   Examples
+-   [getCryptoTag](#getCryptoTag)
+    -   Url
+    -   Parameters
+    -   Examples
+-   [getCryptoInfo](#getCryptoInfo)
+    -   Url
+    -   Parameters
+    -   Examples
+-   [getMetricsQuotesLatest](#getMetricsQuotesLatest)
+    -   Url
+    -   Parameters
+    -   Examples
+-   [getMetricsFearAndGreed](#getMetricsFearAndGreed)
+    -   Url
+    -   Parameters
+    -   Examples
+-   [getToolsConversionRates](#getToolsConversionRates)
+    -   Url
+    -   Parameters
+    -   Examples
+-   [getExchangeInfo](#getExchangeInfo)
+    -   Url
+    -   Parameters
+    -   Examples
+-   [getExchangeListingsLatest](#getExchangeListingsLatest)
+    -   Url
+    -   Parameters
+    -   Examples
+-   [getExchangeMarketPairs](#getExchangeMarketPairs)
+    -   Url
+    -   Parameters
+    -   Examples
+-   [getNews](#getNews)
     -   Url
     -   Parameters
     -   Examples
@@ -90,143 +106,211 @@ client.getGainers(query).then(console.log).catch(console.error)
     -   Url
     -   Parameters
     -   Examples
--   [getFiatMap](#getFiatMap)
-    -   Url
-    -   Parameters
-    -   Examples
--   [getCryptoMap](#getCryptoMap)
-    -   Url
-    -   Parameters
-    -   Examples
--   [getTrending](#getTrending)
-    -   Url
-    -   Parameters
-    -   Examples
--   [getConvertion](#getConvertion)
-    -   Url
-    -   Parameters
-    -   Examples
 -   [getNewsSearch](#getNewsSearch)
     -   Url
     -   Parameters
     -   Examples
+-   [getNewsTag](#getNewsTag)
+    -   Url
+    -   Parameters
+    -   Examples
+-   [getNewsTagInfo](#getNewsTagInfo)
+    -   Url
+    -   Parameters
+    -   Examples
+-   [getAdCategoryMap](#getAdCategoryMap)
+    -   Url
+    -   Parameters
+    -   Examples
+-   [getAdAssetLatest](#getAdAssetLatest)
+    -   Url
+    -   Parameters
+    -   Examples
 
 
-### getQuoteLatest
+## getCryptoQuotesLatest
 
 #### Url
 - /cryptocurrency/quotes/latest
 
 #### Parameter
 -   `options` (Object) Options for the request:
-    -   `options.slug` (String)
-    -   `options.symbol` (String)
-    -   `options.id` (Array<Integer>)
+    -   `options.slug` 
+    -   `options.symbol`
 
 #### Examples
 ```javascript
 const client = new Krypto(BASE_URL)
-client.getQuoteLatest(query).then(console.log).catch(console.error)
+client.getCryptoQuotesLatest(query).then(console.log).catch(console.error)
 ```
 
     
-### getGainers
+## getCryptoMarketPairsLatest
 
+#### Url
+- /cryptocurrency/market-pairs/latest
+
+#### Parameters
+-   `options` (Object) Options for the request:
+    -   `options.id` (Array)
+    -   `options.slug` 
+    -   `options.symbol` 
+
+#### Examples
+```javascript
+const client = new Krypto(BASE_URL)
+client.getCryptoMarketPairsLatest(query).then(console.log).catch(console.error)
+```
+   
+    
+## getCryptoMap
+    
+#### Url
+- /cryptocurrency/map
+
+#### Parameters
+-   `options` (Object) Options for the request:
+    -   `options.start`
+    -   `options.limit`
+
+#### Examples
+```javascript
+const client = new Krypto(BASE_URL)
+client.getCryptoMap(query).then(console.log).catch(console.error)
+```
+    
+    
+## getFiatMap
+
+#### Url
+- /fiat/map
+    
+#### Parameters
+-   `options` (Object) Options for the request:
+    -   `options.start`
+    -   `options.limit`
+
+#### Examples
+```javascript
+const client = new Krypto(BASE_URL)
+client.getFiatMap(query).then(console.log).catch(console.error)
+```
+    
+    
+## getCryptoListingsLatest
+
+#### Url
+- /cryptocurrency/listings/latest
+    
+#### Parameters
+-   `options` (Object) Options for the request:
+    -   `options.start`
+    -   `options.limit`
+
+#### Examples
+```javascript
+const client = new Krypto(BASE_URL)
+client.getCryptoListingsLatest().then(console.log).catch(console.error)
+```
+    
+    
+## getCryptoListingsTrending
+
+#### Url
+- /cryptocurrency/listings/trending
+    
+#### Parameters
+-   `options` (Object) Options for the request:
+    -   `options.start`
+    -   `options.limit`
+
+#### Examples
+```javascript
+const client = new Krypto(BASE_URL)
+client.getCryptoListingsTrending().then(console.log).catch(console.error)
+```
+    
+    
+## getCryptoListingsGainers
+    
 #### Url
 - /cryptocurrency/listings/gainers
 
 #### Parameters
 -   `options` (Object) Options for the request:
-    -   `options.start` (Integer)
-    -   `options.end` (Integer)
+    -   `options.start`
+    -   `options.limit`
 
 #### Examples
 ```javascript
 const client = new Krypto(BASE_URL)
-client.getGainers(query).then(console.log).catch(console.error)
+client.getCryptoListingsGainers(query).then(console.log).catch(console.error)
 ```
-   
     
-### getRecent
     
+## getCryptoListingsRecent
+
 #### Url
 - /cryptocurrency/listings/recent
-
-#### Parameters
--   `options` (Object) Options for the request:
-    -   `options.start` (Integer)
-    -   `options.end` (Integer)
-
-#### Examples
-```javascript
-const client = new Krypto(BASE_URL)
-client.getRecent(query).then(console.log).catch(console.error)
-```
-    
-    
-### getLatest
-
-#### Url
-- /cryptocurrency/listings/latest
     
 #### Parameters
 -   `options` (Object) Options for the request:
-    -   `options.start` (Integer)
-    -   `options.end` (Integer)
+    -   `options.start`
+    -   `options.limit`
 
 #### Examples
 ```javascript
 const client = new Krypto(BASE_URL)
-client.getLatest(query).then(console.log).catch(console.error)
+client.getCryptoListingsRecent().then(console.log).catch(console.error)
 ```
     
-    
-### getTags
+## getCryptoTag
 
 #### Url
-- /cryptocurrency/listings/latest
+- /cryptocurrency/tag
     
 #### Parameters
 
 #### Examples
 ```javascript
 const client = new Krypto(BASE_URL)
-client.getLatest().then(console.log).catch(console.error)
+client.getCryptoTag(query).then(console.log).catch(console.error)
 ```
     
-    
-### getMetricsQuotes
+
+## getCryptoInfo
 
 #### Url
-- /cryptocurrency/listings/latest
+- /exchange/info
     
-#### Parameters
-
-#### Examples
-```javascript
-const client = new Krypto(BASE_URL)
-client.getMetricsQuotes().then(console.log).catch(console.error)
-```
-    
-    
-### getNews
-    
-#### Url
-- /news/latest
-
 #### Parameters
 -   `options` (Object) Options for the request:
-    -   `options.start` (Integer)
-    -   `options.end` (Integer)
+    -   `options.id`
+    -   `options.slug`
+    -   `options.symbol`
 
 #### Examples
 ```javascript
 const client = new Krypto(BASE_URL)
-client.getNews(query).then(console.log).catch(console.error)
+client.getCryptoInfo(query).then(console.log).catch(console.error)
 ```
     
     
-### getFearGreed
+## getMetricsQuotesLatest
+
+#### Url
+- /metrics/quotes/latest
+    
+#### Parameters
+
+#### Examples
+```javascript
+const client = new Krypto(BASE_URL)
+client.getMetricsQuotesLatest(query).then(console.log).catch(console.error)
+```
+    
+    
+## getMetricsFearAndGreed
 
 #### Url
 - /metrics/fear-and-greed
@@ -236,36 +320,36 @@ client.getNews(query).then(console.log).catch(console.error)
 #### Examples
 ```javascript
 const client = new Krypto(BASE_URL)
-client.getFearGreed().then(console.log).catch(console.error)
+client.getMetricsFearAndGreed(query).then(console.log).catch(console.error)
 ```
     
-### getInfo
+    
+## getToolsConversionRates
 
 #### Url
-- /cryptocurrency/info
+- /tools/conversion-rates
     
 #### Parameters
 -   `options` (Object) Options for the request:
-    -   `options.slug` (String)
-    -   `options.symbol` (String)
-    -   `options.id` (Array)
+    -   `options.symbol`
+    -   `options.convert`
 
 #### Examples
 ```javascript
 const client = new Krypto(BASE_URL)
-client.getInfo(query).then(console.log).catch(console.error)
+client.getToolsConversionRates(query).then(console.log).catch(console.error)
 ```
     
-
-### getExchangeInfo
+    
+## getExchangeInfo
 
 #### Url
-- /exchange/info
+- /news
     
 #### Parameters
 -   `options` (Object) Options for the request:
-    -   `options.slug` (String)
-    -   `options.id` (Array)
+    -   `options.id` 
+    -   `options.slug`
 
 #### Examples
 ```javascript
@@ -274,21 +358,20 @@ client.getExchangeInfo(query).then(console.log).catch(console.error)
 ```
     
     
-### getMarketPairs
+## getExchangeListingsLatest
 
 #### Url
-- /cryptocurrency/market-pairs/latest
+- /exchange/listings/latest
     
 #### Parameters
 -   `options` (Object) Options for the request:
-    -   `options.slug` (String)
-    -   `options.symbol` (String)
-    -   `options.id` (Array)
+    -   `options.start`
+    -   `options.limit`
 
 #### Examples
 ```javascript
 const client = new Krypto(BASE_URL)
-client.getMarketPairs(query).then(console.log).catch(console.error)
+client.getExchangeListingsLatest(query).then(console.log).catch(console.error)
 ```
     
     
@@ -299,9 +382,10 @@ client.getMarketPairs(query).then(console.log).catch(console.error)
     
 #### Parameters
 -   `options` (Object) Options for the request:
-    -   `options.slug` (String)
-    -   `options.symbol` (String)
-    -   `options.id` (Array)
+    -   `options.id`
+    -   `options.slug`
+    -   `options.start`
+    -   `options.limit`
 
 #### Examples
 ```javascript
@@ -310,125 +394,134 @@ client.getExchangeMarketPairs(query).then(console.log).catch(console.error)
 ```
     
     
-### getExchangeListings
+## getNews
 
 #### Url
-- /exchange/listings/latest
+- /news/latest
     
 #### Parameters
 -   `options` (Object) Options for the request:
-    -   `options.start` (Integer)
-    -   `options.limit` (Integer)
+    -   `options.start`
+    -   `options.limit`
 
 #### Examples
 ```javascript
 const client = new Krypto(BASE_URL)
-client.getExchangeListings(query).then(console.log).catch(console.error)
+client.getNews(query).then(console.log).catch(console.error)
 ```
     
     
-### getSingleNews
+## getSingleNews
 
 #### Url
 - /news
     
 #### Parameters
 -   `options` (Object) Options for the request:
-    -   `options.start` (Integer)
-    -   `options.limit` (Integer)
+    -   `options.slug`
+    -   `options.tag`
+    -   `options.start`
+    -   `options.limit`
 
 #### Examples
 ```javascript
 const client = new Krypto(BASE_URL)
 client.getSingleNews(query).then(console.log).catch(console.error)
 ```
-    
-    
-### getFiatMap
-
-#### Url
-- /fiat/map
-    
-#### Parameters
--   `options` (Object) Options for the request:
-    -   `options.start` (Integer)
-    -   `options.limit` (Integer)
-
-#### Examples
-```javascript
-const client = new Krypto(BASE_URL)
-client.getFiatMap(query).then(console.log).catch(console.error)
-```
-    
-    
-### getCryptoMap
-
-#### Url
-- /cryptocurrency/map
-    
-#### Parameters
--   `options` (Object) Options for the request:
-    -   `options.start` (Integer)
-    -   `options.limit` (Integer)
-
-#### Examples
-```javascript
-const client = new Krypto(BASE_URL)
-client.getCryptoMap(query).then(console.log).catch(console.error)
-```
-    
-    
-### getTrending
-
-#### Url
-- /cryptocurrency/listings/trending
-    
-#### Parameters
--   `options` (Object) Options for the request:
-    -   `options.start` (Integer)
-    -   `options.limit` (Integer)
-
-#### Examples
-```javascript
-const client = new Krypto(BASE_URL)
-client.getTrending(query).then(console.log).catch(console.error)
-```
-    
-    
-### getConvertion
-
-#### Url
-- /cryptocurrency/listings/trending
-    
-#### Parameters
--   `options` (Object) Options for the request:
-    -   `options.symbol` (String) !Required
-    -   `options.convert` (Array) !Required
-
-#### Examples
-```javascript
-const client = new Krypto(BASE_URL)
-client.getConvertion(query).then(console.log).catch(console.error)
-```
 
 
 
-### getNewsSearch
+## getNewsSearch
 
 #### Url
 - /news/search
     
 #### Parameters
 -   `options` (Object) Options for the request:
-    -   `options.slug` (String) 
-    -   `options.tag` (String)
-    -   `options.start` (Integer)
-    -   `options.limit` (Integer)
+    -   `options.slug`
+    -   `options.tag` 
+    -   `options.start`
+    -   `options.limit`
 
 #### Examples
 ```javascript
 const client = new Krypto(BASE_URL)
 client.getNewsSearch(query).then(console.log).catch(console.error)
+```
+
+
+
+## getNewsTag
+
+#### Url
+- /news/tag/map
+    
+#### Parameters
+-   `options` (Object) Options for the request:
+    -   `options.start`
+    -   `options.limit`
+
+#### Examples
+```javascript
+const client = new Krypto(BASE_URL)
+client.getNewsTag(query).then(console.log).catch(console.error)
+```
+
+
+
+## getNewsTagInfo
+
+#### Url
+- /news/tag/info
+    
+#### Parameters
+-   `options` (Object) Options for the request:
+    -   `options.slug`
+    -   `options.id`
+
+#### Examples
+```javascript
+const client = new Krypto(BASE_URL)
+client.getNewsTagInfo(query).then(console.log).catch(console.error)
+```
+
+
+
+## getAdCategoryMap
+
+#### Url
+- /ad/category/map
+    
+#### Parameters
+-   `options` (Object) Options for the request:
+    -   `options.start`
+    -   `options.limit`
+
+#### Examples
+```javascript
+const client = new Krypto(BASE_URL)
+client.getAdCategoryMap(query).then(console.log).catch(console.error)
+```
+
+
+
+## getAdAssetLatest
+
+#### Url
+- /ad/category/map
+    
+#### Parameters
+-   `options` (Object) Options for the request:
+    -   `options.id`
+    -   `options.slug`
+    -   `options.symbol`
+    -   `options.category`
+    -   `options.limit`
+
+#### Examples
+```javascript
+const client = new Krypto(BASE_URL)
+client.getAdAssetLatest(query).then(console.log).catch(console.error)
 ```
     
     
