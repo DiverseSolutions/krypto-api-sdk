@@ -1,13 +1,12 @@
 'use strict'
 
-const fetch = require('node-fetch')
+const axios = require('axios')
 const qs = require('qs')
 
 // const BASE_URL = 'https://api.krypto.mn'
 
 class Krypto {
-
-     constructor (BASE_URL, { fetcher = fetch, config = {} } = {}) {
+     constructor (BASE_URL, { config = {} } = {}) {
         this.config = Object.assign({}, {
           method: 'GET',
           headers: {
@@ -18,7 +17,6 @@ class Krypto {
           }
         }, config)
     
-        this.fetcher = fetcher
         this.url = `${BASE_URL}`
     }
 
@@ -27,7 +25,7 @@ class Krypto {
         let customQuery = query.id ? {id: query.id.join(',')} : query
 
         return createRequest({
-            fetcher: this.fetcher,
+            axios: this.axios,
             url: `${this.url}/cryptocurrency/quotes/latest`,
             config: this.config,
             query: customQuery
@@ -39,7 +37,7 @@ class Krypto {
         let customQuery = query.id ? {id: query.id.join(',')} : query
         
         return createRequest({
-            fetcher: this.fetcher,
+            axios: this.axios,
             url: `${this.url}/cryptocurrency/market-pairs/latest`,
             config: this.config,
             query: customQuery
@@ -49,7 +47,7 @@ class Krypto {
     // start, limit
     getCryptoMap (query) {
         return createRequest({
-            fetcher: this.fetcher,
+            axios: this.axios,
             url: `${this.url}/cryptocurrency/map`,
             config: this.config,
             query
@@ -59,7 +57,7 @@ class Krypto {
     // start, limit
     getFiatMap (query) {
         return createRequest({
-            fetcher: this.fetcher,
+            axios: this.axios,
             url: `${this.url}/fiat/map`,
             config: this.config,
             query
@@ -69,7 +67,7 @@ class Krypto {
     // start, limit
     getCryptoListingsLatest (query) {
         return createRequest({
-            fetcher: this.fetcher,
+            axios: this.axios,
             url: `${this.url}/cryptocurrency/listings/latest`,
             config: this.config,
             query
@@ -79,7 +77,7 @@ class Krypto {
     // start, limit
     getCryptoListingsTrending (query) {
         return createRequest({
-            fetcher: this.fetcher,
+            axios: this.axios,
             url: `${this.url}/cryptocurrency/listings/trending`,
             config: this.config,
             query
@@ -89,7 +87,7 @@ class Krypto {
     // start, limit
     getCryptoListingsGainers (query) {
         return createRequest({
-            fetcher: this.fetcher,
+            axios: this.axios,
             url: `${this.url}/cryptocurrency/listings/gainers`,
             config: this.config,
             query
@@ -99,7 +97,7 @@ class Krypto {
     // start, limit
     getCryptoListingsRecent (query) {
         return createRequest({
-            fetcher: this.fetcher,
+            axios: this.axios,
             url: `${this.url}/cryptocurrency/listings/recent`,
             config: this.config,
             query
@@ -108,7 +106,7 @@ class Krypto {
 
     getCryptoTag () {
         return createRequest({
-            fetcher: this.fetcher,
+            axios: this.axios,
             url: `${this.url}/cryptocurrency/tag`,
             config: this.config,
         })
@@ -119,7 +117,7 @@ class Krypto {
         let customQuery = query.id ? {id: query.id.join(',')} : query
         
         return createRequest({
-            fetcher: this.fetcher,
+            axios: this.axios,
             url: `${this.url}/cryptocurrency/info`,
             config: this.config,
             query: customQuery
@@ -128,7 +126,7 @@ class Krypto {
 
     getMetricsQuotesLatest () {
         return createRequest({
-            fetcher: this.fetcher,
+            axios: this.axios,
             url: `${this.url}/metrics/quotes/latest`,
             config: this.config,
         })
@@ -136,7 +134,7 @@ class Krypto {
 
     getMetricsFearAndGreed () {
         return createRequest({
-            fetcher: this.fetcher,
+            axios: this.axios,
             url: `${this.url}/metrics/fear-and-greed`,
             config: this.config,
         })
@@ -145,7 +143,7 @@ class Krypto {
     // symbol, convert
     getToolsConversionRates (query) {
         return createRequest({
-            fetcher: this.fetcher,
+            axios: this.axios,
             url: `${this.url}/tools/conversion-rates`,
             config: this.config,
             query: query
@@ -157,7 +155,7 @@ class Krypto {
         let customQuery = query.id ? {id: query.id.join(',')} : query
 
         return createRequest({
-            fetcher: this.fetcher,
+            axios: this.axios,
             url: `${this.url}/exchange/info`,
             config: this.config,
             query: customQuery
@@ -167,7 +165,7 @@ class Krypto {
     // start, limit
     getExchangeListingsLatest (query) {
         return createRequest({
-            fetcher: this.fetcher,
+            axios: this.axios,
             url: `${this.url}/exchange/listings/latest`,
             config: this.config,
             query
@@ -179,7 +177,7 @@ class Krypto {
         let customQuery = query.id ? {id: query.id.join(',')} : query
 
         return createRequest({
-            fetcher: this.fetcher,
+            axios: this.axios,
             url: `${this.url}/exchange/market-pairs/latest`,
             config: this.config,
             query: customQuery
@@ -189,7 +187,7 @@ class Krypto {
     // start, limit
     getNews (query) {
         return createRequest({
-            fetcher: this.fetcher,
+            axios: this.axios,
             url: `${this.url}/news/latest`,
             config: this.config,
             query
@@ -199,7 +197,7 @@ class Krypto {
     // slug, tag, start, limit
     getSingleNews (query) {
         return createRequest({
-            fetcher: this.fetcher,
+            axios: this.axios,
             url: `${this.url}/news`,
             config: this.config,
             query
@@ -209,7 +207,7 @@ class Krypto {
     // slug, tag, start, limit
     getNewsSearch (query) {
         return createRequest({
-            fetcher: this.fetcher,
+            axios: this.axios,
             url: `${this.url}/news/search`,
             config: this.config,
             query: query
@@ -219,7 +217,7 @@ class Krypto {
     // start, limit
     getNewsTag (query) {
         return createRequest({
-            fetcher: this.fetcher,
+            axios: this.axios,
             url: `${this.url}/news/tag/map`,
             config: this.config,
             query: query
@@ -229,7 +227,7 @@ class Krypto {
     // slug, id
     getNewsTagInfo (query) {
         return createRequest({
-            fetcher: this.fetcher,
+            axios: this.axios,
             url: `${this.url}/news/tag/info`,
             config: this.config,
             query: query
@@ -239,7 +237,7 @@ class Krypto {
     // start, limit
     getAdCategoryMap (query) {
         return createRequest({
-            fetcher: this.fetcher,
+            axios: this.axios,
             url: `${this.url}/ad/category/map`,
             config: this.config,
             query: query
@@ -249,7 +247,7 @@ class Krypto {
     // slug, id, symbol, category, limit
     getAdAssetLatest (query) {
         return createRequest({
-            fetcher: this.fetcher,
+            axios: this.axios,
             url: `${this.url}/ad/asset/latest`,
             config: this.config,
             query: query
@@ -258,11 +256,11 @@ class Krypto {
 }
 
 const createRequest = (args = {}) => {
-    const { url, config, query, fetcher } = args
+    const { url, config, query } = args
 
-    return fetcher(`${url}${query ? `?${qs.stringify(query)}` : ''}`, config).then(res =>
-        res.json()  
-    )
+    console.log(`${url}${query ? `?${qs.stringify(query)}` : ''}`)
+
+    return axios.get(`${url}${query ? `?${qs.stringify(query)}` : ''}`, config).then(res => res.data)
 }
 
 module.exports = Krypto
