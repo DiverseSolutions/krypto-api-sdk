@@ -20,7 +20,7 @@ class Krypto {
         this.url = `${BASE_URL}`
     }
 
-    // id: [], slug, symbol
+    // id, slug, symbol
     getCryptoQuotesLatest (query) {
         let customQuery = query.id ? {id: query.id.join(',')} : query
 
@@ -32,7 +32,7 @@ class Krypto {
         })
     }
 
-    // id: [], slug, symbol
+    // id, slug, symbol
     getCryptoMarketPairsLatest (query) {
         let customQuery = query.id ? {id: query.id.join(',')} : query
         
@@ -44,7 +44,7 @@ class Krypto {
         })
     }
 
-    // start, limit
+    // start, limit, rank
     getCryptoMap (query) {
         return createRequest({
             axios: this.axios,
@@ -64,7 +64,7 @@ class Krypto {
         })
     }
 
-    // start, limit
+    // start, limit, rank
     getCryptoListingsLatest (query) {
         return createRequest({
             axios: this.axios,
@@ -104,15 +104,17 @@ class Krypto {
         })
     }
 
-    getCryptoTag () {
+    // start, limit
+    getCryptoTag (query) {
         return createRequest({
             axios: this.axios,
             url: `${this.url}/cryptocurrency/tag`,
             config: this.config,
+            query
         })
     }
 
-    // id: [], slug, symbol
+    // id, slug, symbol
     getCryptoInfo (query) {
         let customQuery = query.id ? {id: query.id.join(',')} : query
         
@@ -251,6 +253,15 @@ class Krypto {
             url: `${this.url}/ad/asset/latest`,
             config: this.config,
             query: query
+        })
+    }
+
+    //
+    getKeyInfo () {
+        return createRequest({
+            axios: this.axios,
+            url: `${this.url}/key/info`,
+            config: this.config,
         })
     }
 }
