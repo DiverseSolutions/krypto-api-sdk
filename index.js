@@ -10,7 +10,6 @@ class Krypto {
         this.config = Object.assign({}, {
           method: 'GET',
           headers: {
-            'X-CMC_PRO_API_KEY': this.apiKey,
             Accept: 'application/json',
             'Accept-Charset': 'utf-8',
             'Accept-Encoding': 'deflate, gzip'
