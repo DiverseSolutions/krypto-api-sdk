@@ -109,7 +109,7 @@ class Krypto {
     getCryptoTag () {
         return createRequest({
             fetcher: this.fetcher,
-            url: `${this.url}/cryptocurrency/tag`,
+            url: `${this.url}/cryptocurrency/tag/map`,
             config: this.config,
         })
     }
