@@ -106,11 +106,12 @@ class Krypto {
         })
     }
 
-    getCryptoTag () {
+    getCryptoTag (query) {
         return createRequest({
             fetcher: this.fetcher,
             url: `${this.url}/cryptocurrency/tag/map`,
             config: this.config,
+            query: query
         })
     }
 
@@ -126,19 +127,21 @@ class Krypto {
         })
     }
 
-    getMetricsQuotesLatest () {
+    getMetricsQuotesLatest (query) {
         return createRequest({
             fetcher: this.fetcher,
             url: `${this.url}/metrics/quotes/latest`,
             config: this.config,
+            query: query
         })
     }
 
-    getMetricsFearAndGreed () {
+    getMetricsFearAndGreed (query) {
         return createRequest({
             fetcher: this.fetcher,
             url: `${this.url}/metrics/fear-and-greed`,
             config: this.config,
+            query: query
         })
     }
 
